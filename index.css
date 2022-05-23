@@ -1,0 +1,244 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    height: 200vh;
+}
+section{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    margin-top: 57px;
+    margin-left: 80px;
+    padding: 20px;
+    background-color: #fbfbfb;;
+    overflow-x: hidden;
+  
+}
+header{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 57px;
+    background-color: white;
+    white-space: nowrap;
+    z-index: 100;
+    border-bottom: 1px solid  lightgray;
+}
+div.first{
+   padding-left: 28px;
+    display: flex;
+    gap:32px;
+    width: 170px;
+}
+div.third{
+  display: flex;
+  justify-content: right;
+  justify-content: space-between;
+  margin-right: 2%;
+  align-items: center;
+  width: 185px;
+}
+.position, .position1,.position2,.position3{
+    cursor: pointer;
+    position: relative;
+}
+.three{
+    position: absolute;
+    z-index: 90;
+    top:-1px;
+    right: -3px;
+    color: white;
+    background-color: rgb(215, 67, 67);
+    border-radius: 50%;
+   padding: 2px 5px;
+    font-size: 11px;
+    text-align: center;
+}
+.tooltip,.tooltip2,.tooltip3{
+    position: absolute;
+    bottom: -45px;
+    left: -50%;
+    background-color: gray;
+    text-align: center;
+   object-fit: contain;
+    color: white;
+    font-size: 10px;
+    padding: 10px;
+    display: none;
+}
+.position1:hover .tooltip, .position2:hover .tooltip2, .position3:hover .tooltip3{
+    display: inline-block;
+}
+div.second{
+    flex: 1;
+    text-align: center;
+    max-width: 400px;
+    height: 40px;
+    margin-right:50px;
+    margin-left: 50px;
+}
+header img{
+    width: 25px;
+}
+button{
+    width: 5%;
+}
+img.channel{
+    width: 28px;
+    object-fit:contain;
+}
+img.youtube-logo{
+    width: 85px;
+   
+}
+input[type=text]{
+    height: 40px;
+    border: 1px solid grey;
+    margin-top: 0%;
+    padding-left: 15px;
+    text-transform: capitalize;
+    font-size: 15px;
+     width: 355px;
+    vertical-align:top;
+    box-shadow: inset 2px 2px 1px rgba(162, 176, 243, 0.3);
+}
+input[type=text]:focus{
+    border-color:blue ;
+    outline: blue;
+}
+button{
+   height:inherit;
+   width: 60px;
+   height: 40px;
+  border: 1px solid grey;
+}
+.search , .voice{
+    position: relative;
+}
+.search-tooltip{
+    position: absolute;
+    text-transform: capitalize;
+    bottom: -45px;
+    color: white;
+    background-color: gray;
+    padding: 8px;
+    text-align: center;
+    left: 5px;
+    display: none;
+}
+.search:hover .search-tooltip ,.voice:hover .search-tooltip{
+    display: inline-block;
+}
+button img{
+    width: 25px;
+    border: none;
+    padding-top: 3px;
+
+}
+button.search{
+    margin-left: -5px;
+    margin-right: 10px;
+}
+button.voice{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    /* margin-left:-350px; */
+    /* margin-left: -550%; */
+    border: none;
+}
+img.firstimg{
+    width: 100%;
+}
+div.sized{
+    margin-right: 15px;
+    white-space: wrap;
+    margin-bottom: 50px;
+   
+}
+.under{
+    display: grid;
+    margin-top: 1em;
+    grid-template-columns: 20px 1fr;
+    gap:40px;
+    width: inherit;
+}
+.thumbnail{
+    position: relative;
+}
+.time{
+    position: absolute;
+    right: 8px;
+    bottom: 15px;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    font-size: 13px;
+    padding: 2px;
+}
+.under img{
+    width: 50px;
+    border-radius: 50%;
+}
+.under p{
+    font-size: smaller;
+    line-height: 1.5em;
+    color: lightslategray;
+}
+h4{
+   font-size: 12.5px;
+   font-weight: light;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+}
+nav{
+    position: fixed;
+    height:80vh;
+    background-color: white;
+    width: 80px;
+    top:40px;
+    left: 0;
+    font-size: 10px;
+    padding-top: 20px;
+    z-index: 100;
+}
+nav img{
+    width: 23px;
+    margin-bottom: 5px;
+   
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    height: 74px;
+    font-size: 10px;
+    cursor: pointer;
+    
+}
+nav div:hover{
+    background-color: #fbfbfc;
+
+}
+button:hover{
+    cursor: pointer;
+}
+@media screen and (max-width: 1170px) {
+    section{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width:870px) {
+    section{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
